@@ -11,15 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('reserva', function (Blueprint $table) {
+        Schema::create('reservas', function (Blueprint $table) {
             $table->id('idReserva');
             $table->timestamps();
             $table->date('date_inicio');
             $table->date('data_fim');
-            $table->foreignId('idUser')
-                ->references('idUser')->on('users')->onDelete('cascade');
-            $table->foreignId('idEmprestimo')
-                ->references('idEmprestimo')->on('emprestimo')->onDelete('cascade');
+            $table->integer('idUser'); //Foreign Key
+            $table->integer('idEmprestimo'); //Foreign Key
         });
     }
 

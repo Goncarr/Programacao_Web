@@ -11,15 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('equipamento', function (Blueprint $table) {
+        Schema::create('equipamentos', function (Blueprint $table) {
             $table->id('idEquipamento');
             $table->string('nome');
             $table->string('codigo');
             $table->longText('descricao');
             $table->enum('estado', ['Bom','Razoavél','Usado']);
             $table->string('localizacao');
-            $table->foreignId('idCategoria')
-                ->references('idCategoria')->on('categoria');
+            $table->integer('idCategoria'); //Foreign Key
         });
     }
 

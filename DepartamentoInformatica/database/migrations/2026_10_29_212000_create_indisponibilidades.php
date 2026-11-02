@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('indisponibilidade', function (Blueprint $table) {
+        Schema::create('indisponibilidades', function (Blueprint $table) {
             $table->id('idIndisponibilidade');
             $table->date('dataInicio');
             $table->date('datafim');
             $table->string('motivo');
-            $table->foreignId('idEquipamento')
-                ->references('idEquipamento')->on('equipamento')->onDelete('cascade');
+            $table->integer('idEquipamento'); //Foreign Key
         });
     }
 

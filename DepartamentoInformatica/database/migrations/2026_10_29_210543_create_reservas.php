@@ -12,12 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('reservas', function (Blueprint $table) {
-            $table->id('idReserva');
-            $table->timestamps();
+            $table->id('id_reserva');
             $table->date('date_inicio');
             $table->date('data_fim');
-            $table->integer('idUser'); //Foreign Key
-            $table->integer('idEmprestimo'); //Foreign Key
+            $table->integer('id_utilizador'); //Foreign Key
+            $table->integer('id_emprestimo'); //Foreign Key
         });
     }
 

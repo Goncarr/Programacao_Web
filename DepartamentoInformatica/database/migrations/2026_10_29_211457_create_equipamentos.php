@@ -12,13 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('equipamentos', function (Blueprint $table) {
-            $table->id('idEquipamento');
+            $table->id('id_equipamento');
             $table->string('nome');
             $table->string('codigo');
             $table->longText('descricao');
             $table->enum('estado', ['Bom','Razoavél','Usado']);
             $table->string('localizacao');
-            $table->integer('idCategoria'); //Foreign Key
+            $table->integer('id_categoria'); //Foreign Key
         });
     }
 

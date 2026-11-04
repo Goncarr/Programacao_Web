@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('indisponibilidades', function (Blueprint $table) {
-            $table->id('idIndisponibilidade');
-            $table->date('dataInicio');
-            $table->date('datafim');
+            $table->id('id_indisponibilidade');
+            $table->date('data_inicio');
+            $table->date('data_fim');
             $table->string('motivo');
-            $table->integer('idEquipamento'); //Foreign Key
+            $table->integer('id_equipamento'); //Foreign Key
         });
     }
 

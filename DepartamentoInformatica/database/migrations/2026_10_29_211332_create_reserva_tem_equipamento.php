@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('reserva_has_equipamento', function (Blueprint $table) {
-            $table->integer('idReserva'); //Foreign Key
-            $table->integer('idEquipamento'); //Foreign Key
+        Schema::create('reserva_tem_equipamento', function (Blueprint $table) {
+            $table->integer('id_reserva'); //Foreign Key
+            $table->integer('id_equipamento'); //Foreign Key
         });
     }
 
